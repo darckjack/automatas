@@ -24,3 +24,9 @@ u.save!
   puts "#{i} test users created..." if (i % 5 == 0)
 
 end
+
+users = User.order(:created_at).take(6)
+titulo = "Metodos Matematicos"
+maestro = "Mariana"
+
+users.each { |user| user.posts.create!(title: titulo, grade: Random.new.rand(50..100), teacher: maestro)  }
