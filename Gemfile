@@ -26,6 +26,9 @@ gem 'font-awesome-sass', '4.3.2.1'
 # Bootstrap 3: https://github.com/twbs/bootstrap-sass
 gem 'bootstrap-sass', '3.3.4.1'
 
+# Use the automata gem
+gem 'automata', '~> 1.0.0'
+
 group :development, :test do
   gem 'byebug', '4.0.5'
   gem 'web-console', '2.1.2'
