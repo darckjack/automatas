@@ -9,27 +9,28 @@
 <%= form_for [:admin, @post], role: "form" do |f| %>
 
 <div class="form-group">
-  <%= f.label :title %>
+  <%= f.label :title, "Materia" %>
   <div class="row">
     <div class="col-xs-12">
-      <%= f.text_field :title, :autofocus => true, class: "form-control monospaced-control", placeholder: "Title (also used for URL slug)..." %>
+      <%= f.text_field :title, :autofocus => true, class: "form-control monospaced-control", placeholder: "Nombre de la materia" %>
     </div>
   </div>
 </div>
 
 <div class="form-group">
-  <%= f.label :content_md, "Content" %>
+  <%= f.label :grade, "Calificacion" %>
   <div class="row">
     <div class="col-xs-12">
-      <%= f.text_area :content_md, rows: 15, class: "form-control monospaced-control", placeholder: "Post content (Markdown format)..." %>
+      <%= f.text_field :grade, class: "form-control monospaced-control", placeholder: "Calificacion de la materia" %>
     </div>
   </div>
 </div>
 
 <div class="form-group">
+  <%= f.label :teacher, "Maestro" %>
   <div class="row">
     <div class="col-xs-12">
-      <%= f.check_box :draft %> <%= f.label :draft, "draft" %>
+      <%= f.text_field :teacher, class: "form-control monospaced-control", placeholder: "Nombre del maestro" %>
     </div>
   </div>
 </div>

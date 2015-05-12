@@ -63,8 +63,8 @@ class Admin::PostsController < Admin::BaseController
   def post_params
     params.require(:post).permit(
     :title,
-    :content_md,
-    :draft,
+    :grade,
+    :teacher,
     :updated_at
     )
   end
