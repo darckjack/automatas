@@ -23,7 +23,8 @@ class Post < ActiveRecord::Base
 
   # Validations
   validates :title, presence: true, length: { maximum: 100 }, uniqueness: true
-  validates :content_md, presence: true
+  # validates :content_md, presence: true
+  validates :grade, presence: true
 
   # Pagination
   paginates_per 30

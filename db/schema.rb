@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141010133702) do
+ActiveRecord::Schema.define(version: 20150512050105) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20141010133702) do
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "grade"
+    t.string   "teacher"
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
