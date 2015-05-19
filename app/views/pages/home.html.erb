@@ -1,2 +1,19 @@
-<% title("Home Page") %>
-<h1><i class="fa fa-home"></i> Home Page <small>views/pages/home.html.erb</small></h1>
+<% title("Inicio") %>
+<h1><i class="fa fa-home"></i> Inicio </h1>
+
+<h2> Recomendacion de profesores </h2>
+
+
+<%= form_for @post do |f| -%>
+  <div class="form-group">
+  <%= f.label :title, "Materia" %>
+  <div class="row">
+    <div class="col-xs-12">
+      <%= f.text_field :title, :autofocus => true, class: "form-control monospaced-control", placeholder: "Nombre de la materia" %>
+    </div>
+  </div>
+  </div>
+  <p>
+    <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+  </p>
+<% end -%>

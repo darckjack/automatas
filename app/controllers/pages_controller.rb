@@ -4,12 +4,17 @@ class PagesController < ApplicationController
   ]
 
   def home
+    @post = Post.new
   end
 
   def inside
   end
+
+  def new
+    @post = Post.new
+  end
   
-def posts
+  def posts
     @posts = Post.published.page(params[:page]).per(10)
   end
   
